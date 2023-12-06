@@ -1,0 +1,15 @@
+::ng-deep{
+    .profile-details{
+        table{
+            tbody{
+                tr{
+                    td{
+                        .edit{
+                            margin-left: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

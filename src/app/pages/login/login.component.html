@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div class="images mt-1">
+                <img src="../../../assets/images/login.jpg" alt="" width="680px" height="200px" />
+            </div>
+        </div>
+        <div class="col-6 mt-3">
+            <form [formGroup]="loginForm">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="email" class="form-control" formControlName="email">
+                    <div class="text-danger"
+                            *ngIf="input['email'].touched && input['email'].invalid || submitted ">
+                        <div *ngIf="input['email']?.errors?.['required']">Enter Username</div>        
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                    <!-- <i [ngClass]="(showIcon) ? 'fa fa-eye-slash' : 'fa fa-eye'" aria-hidden="true" (click)="onChange()"></i> -->
+                    <div class="text-danger"
+                            *ngIf="input['password'].touched && input['password'].invalid || submitted ">
+                        <div *ngIf="input['password']?.errors?.['required']">Enter password</div>
+                    </div>
+                </div>
+                <!-- <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" formControlName="checkOut">
+                    <label class="form-check-label">Check me out</label>
+                    <div class="text-danger"
+                            *ngIf="input['checkOut'].touched && input['checkOut'].invalid || submitted ">
+                        <div *ngIf="input['checkOut']?.errors?.['required']">Enter </div>
+                    </div>
+                </div> -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary form-control" (click)="login()">Submit</button>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <p>If user have not Account<a routerLink="/register" class="ml-3">Register here</a> 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p class="forget-password"><a routerLink="#">Forget Password</a></p>
+                    </div>
+                </div>
+                <div class="">
+                    <ngx-recaptcha2 #captchaElem
+                        [siteKey]="siteKey"
+                        formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                </div>
+            </form>        
+        </div>
+    </div>
+</div>

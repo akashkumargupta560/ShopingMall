@@ -1,0 +1,169 @@
+<!-- 
+<div class="singup-page container-fluid">
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-7">
+            <div class="form-container mt-4">
+                <h3>Application Form</h3>
+                <div class="application-form">
+                    <form [formGroup]="formValue" (ngSubmit)="submitForm()">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Fullname</label>
+                                    <input type="text" class="form-control" formControlName="fullname" required>
+                                    <div class="text-danger"
+                                        *ngIf="input['fullname'].touched && input['fullname'].invalid || submitted ">
+                                        <div *ngIf="input['fullname']?.errors?.['required']">Enter Fullname</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">D.O.BIRTH</label>
+                                    <input type="calender" class="form-control" formControlName="dob">
+                                    <div class="text-danger"
+                                        *ngIf="input['dob'].touched && input['dob'].invalid || submitted ">
+                                        <div *ngIf="input['dob']?.errors?.['required']">Enter Date Of Birth</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control" aria-describedby="emailHelp"
+                                        formControlName="email">
+                                    <div class="text-danger"
+                                        *ngIf="input['email'].touched && input['email'].invalid || submitted ">
+                                        <div *ngIf="input['email']?.errors?.['required']">Enter Email Address</div>
+                                        <div *ngIf="input['email']?.errors?.['pattern']">Invalid email format.</div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" formControlName="password">
+                                    <div class="text-danger"
+                                        *ngIf="input['password'].touched && input['password'].invalid || submitted ">
+                                        <div *ngIf="input['password']?.errors?.['required']">Enter password</div>
+                                        <div *ngIf="input['password']?.errors?.['checkUpperCase']">at least one uppercase</div>
+                                        <div *ngIf="input['password']?.errors?.['checkLowerCase']">at least one lowerCase</div>
+                                        <div *ngIf="input['password']?.errors?.['checkNumChar']">at least one Number</div>
+                                        <div *ngIf="input['password']?.errors?.['checkSpecialChar']">at least one SpecialCharector</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Phone no</label>
+                                    <input type="text" class="form-control" formControlName="phone">
+                                    <div class="text-danger"
+                                        *ngIf="input['phone'].touched && input['phone'].invalid || submitted ">
+                                        <div *ngIf="input['phone']?.errors?.['required']">Enter phone number</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Conform Password</label>
+                                    <input type="password" class="form-control" formControlName="cPassword">
+                                    <div class="text-danger"
+                                        *ngIf="input['cPassword'].touched && input['cPassword'].invalid || submitted ">
+                                        <div *ngIf="input['cPassword']?.errors?.['required']">Enter conform Password</div>
+                                        <div *ngIf="input['cPassword']?.errors?.['checkPasswords']">Password do not match</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-control" formControlName="city">
+                                    <div class="text-danger"
+                                        *ngIf="input['city'].touched && input['city'].invalid || submitted ">
+                                        <div *ngIf="input['city']?.errors?.['required']">Enter city</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">State</label>
+                                    <input type="text" class="form-control" formControlName="state">
+                                    <div class="text-danger"
+                                        *ngIf="input['state'].touched && input['state'].invalid || submitted ">
+                                        <div *ngIf="input['state']?.errors?.['required']">Enter state</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block text-uppercase" [disabled]="formValue.invalid">Submit</button>
+                        <div class="form-group form-check">
+                            <input type="checkbox" formControlName="acceptTerms" class="form-check-input" />
+                            <label for="acceptTerms" class="form-check-label">I have read and agree to the Terms</label>
+                            <div class="text-danger"
+                                *ngIf="input['acceptTerms'].touched && input['acceptTerms'].invalid || submitted ">
+                                <div *ngIf="input['acceptTerms']?.errors?.['required']"> Accept Terms is required</div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p>If Account has Already<a routerLink="/login" class="pl-2">Login here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!---#dp="bsDatepicker" bsDatepicker [maxDate]="maxDate [bsConfig]="bsConfig"-->
+    <!-- <div class="form-container mt-4">
+        <h3>Application Form</h3>
+        <div class="application-form">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                    <label class="form-label">Fullname</label>
+                    <input type="text" class="form-control" formControlName="fullname">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">
+        
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">D.O.BIRTH</label>
+                    <input type="calender" class="form-control" formControlName="dob">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone no</label>
+                    <input type="text" class="form-control" formControlName="phone">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" formControlName="city">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">State</label>
+                    <input type="text" class="form-control" formControlName="state">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" (click)="submitForm()">Submit</button>
+            </form>
+            <form>
+                
+            </form>
+        </div>
+    </div> -->
+<!-- </div> -->
+
+
+
+<p>sfdjdgfbgj</p>
