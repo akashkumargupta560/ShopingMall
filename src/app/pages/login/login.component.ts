@@ -27,7 +27,6 @@ export class LoginComponent {
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
       recaptcha: new FormControl('', [Validators.required]),
-      //checkOut: new FormControl('', [Validators.required])
     })
   }
   get input(): { [key: string]: AbstractControl } {
