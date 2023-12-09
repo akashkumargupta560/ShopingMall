@@ -13,7 +13,6 @@ export class LoginComponent {
   submitted: boolean = false;
   getUserData: any;
   loginForm!: FormGroup;
-  // userData:any
   constructor(private fb: FormBuilder, private userSrv: UserService, private router: Router) {
     sessionStorage.clear();
   }
