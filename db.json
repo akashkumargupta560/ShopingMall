@@ -1,22 +1,13 @@
 {
   "posts": [
     {
+      "id": 2,
       "fullname": "akash gupta",
       "email": "ak@gmail.com",
-      "password": "Akash@2",
-      "phone": "1236459870",
       "dob": "25/02/1995",
+      "phone": "1236459870",
       "city": "patna",
-      "state": "bihar",
-      "cPassword": "Akash@2",
-      "acceptTerms": [
-        "",
-        [
-          null
-        ]
-      ],
-      "role": "",
-      "id": 2
+      "state": "bihar"
     },
     {
       "fullname": "rahul kumar",
@@ -35,24 +26,6 @@
       ],
       "role": "",
       "id": 3
-    },
-    {
-      "fullname": "rohit kumar",
-      "email": "rk12@gmail.com",
-      "password": "Rohit@1",
-      "phone": "1478965230",
-      "dob": "12/12/2000",
-      "city": "mohile",
-      "state": "delhi",
-      "cPassword": "Rohit@1",
-      "acceptTerms": [
-        "",
-        [
-          null
-        ]
-      ],
-      "role": "",
-      "id": 4
     }
   ],
   "comments": [],

@@ -10,7 +10,6 @@
                 <td>state</td>
                 <td>city</td>
                 <td>action</td>
-                <td></td>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +22,8 @@
                 <td>{{row.city}}</td>
                 <td>{{row.state}}</td>
                 <td>
-                    <button type="button" class="btn btn-info edit" (click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                    <button type="button" class="btn btn-info edit" (click)="onEdit(row)" data-bs-toggle="modal"
+                        data-bs-target="#upDateModal">Edit</button>&nbsp;&nbsp;
                     <button type="button" class="btn btn-danger" (click)="deleteData(row)">Delete</button>
                 </td>
             </tr>
@@ -31,53 +31,61 @@
     </table>
 </div>
 <div class="edit-view">
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal" id="upDateModal">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Personal Profile</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Personal Information</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="">
+                        <form [formGroup]="UpdateValue">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">Fullname</label>
+                                    <input type="text" class="form-control" formControlName="fullname">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control" aria-describedby="emailHelp"
+                                        formControlName="email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">D.O.BIRTH</label>
+                                    <input type="calender" class="form-control" formControlName="dob">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Phone no</label>
+                                    <input type="text" class="form-control" formControlName="phone">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-control" formControlName="city">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">State</label>
+                                    <input type="text" class="form-control" formControlName="state">
+                                </div>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                                    (click)="UpdateForm()">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              <div class="update-form">
-                <form [formGroup]="UpdateValue">
-                    <div class="mb-3">
-                        <label class="form-label">Fullname</label>
-                        <input type="text" class="form-control" formControlName="fullname">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email address</label>
-                        <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">D.O.BIRTH</label>
-                        <input type="calender" class="form-control" formControlName="dob">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Phone no</label>
-                        <input type="text" class="form-control" formControlName="phone">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">City</label>
-                        <input type="text" class="form-control" formControlName="city">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">State</label>
-                        <input type="text" class="form-control" formControlName="state">
-                    </div>
-                    <!-- <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div> -->
-                    <!-- <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button> -->
-                </form>
-              </div>
-            </div>
-            <div class="modal-footer form-group">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" (click)="UpdateForm()">Update</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 </div>
